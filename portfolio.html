@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Théo Mayer — Étudiant en développement informatique</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@300;400;500&family=Geist:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="portfolio.css" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <span class="nav-logo">Théo Mayer</span>
+    <div class="nav-links">
+      <button class="nav-btn" onclick="scrollToSection('about')">About</button>
+      <button class="nav-btn" onclick="scrollToSection('projects')">Projets</button>
+      <button class="nav-btn" onclick="scrollToSection('experience')">Parcours</button>
+      <button class="nav-btn" onclick="scrollToSection('contact')">Contact</button>
+      <button class="theme-toggle" id="themeBtn" aria-label="Changer le thème"></button>
+    </div>
+  </div>
+</nav>
+
+<section id="terminalIntro">
+  <div class="container">
+    <pre id="terminalText" class="terminal-text"></pre>
+    <p id="pressEnter" class="hidden">Appuyez sur Entrée pour continuer...</p>
+  </div>
+</section>
+
+<section id="hero">
+  <div class="container">
+    <p class="hero-eyebrow reveal"></p>
+    <h1 class="hero-name reveal d1">Théo<br><em>Mayer.</em></h1>
+    <p class="hero-desc reveal d2">
+      J’aime concevoir des applications simples et efficaces, 
+      en explorant aussi bien le frontend que le backend, 
+      avec une attention particulière à l’expérience utilisateur.
+    </p>
+    <button class="hero-cta reveal d3" onclick="scrollToSection('contact')">
+      Discutons d'un projet
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </button>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<section id="about" class="section">
+  <div class="container">
+    <p class="section-label">À propos</p>
+    <p class="about-text reveal">
+      Étudiant à Epitech Strasbourg, 
+      je suis curieux et j’aime explorer différents domaines de l’informatique, 
+      avec une préférence pour le développement web et l’intelligence artificielle.
+    </p>
+    <div class="stack reveal d1">
+      <span class="tag">React</span>
+      <span class="tag">Next.js</span>
+      <span class="tag">JavaScript</span>
+      <span class="tag">Node.js</span>
+      <span class="tag">Express</span>
+      <span class="tag">SQL</span>
+      <span class="tag">Python</span>
+      <span class="tag">Git</span>
+      <span class="tag">Docker</span>
+      <span class="tag">Burpsuite</span>
+      <span class="tag">HTML</span>
+      <span class="tag">Suite Adobe</span>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<section id="projects" class="section">
+  <div class="container">
+    <p class="section-label">Projets</p>
+    <div class="projects">
+      <a href="#" class="project-card reveal">
+        <div>
+          <p class="project-year">2025</p>
+          <p class="project-title">Todo list/etodo</p>
+          <p class="project-desc">Projet en groupe de 3, réalisation d'une todo list pour managers et employés.</p>
+          <div class="project-tags">
+            <span class="tag">Next.js</span><span class="tag">Node.js</span><span class="tag">Figma</span><span class="tag">Notion</span>
+          </div>
+        </div>
+        <span class="arrow">↗</span>
+      </a>
+      <a href="#" class="project-card reveal d1">
+        <div>
+          <p class="project-year">2025</p>
+          <p class="project-title">Owasp top 10</p>
+          <p class="project-desc">Introduction à la cybersécurité, CTF sur Owasp Juice Shop avec un score de plus de 14 000.</p>
+          <div class="project-tags">
+            <span class="tag">Burpsuite</span><span class="tag">Dev tool</span><span class="tag">OSINT</span><span class="tag">Manipulation de DB</span>
+          </div>
+        </div>
+        <span class="arrow">↗</span>
+      </a>
+      <a href="#" class="project-card reveal d2">
+        <div>
+          <p class="project-year">2026</p>
+          <p class="project-title">Alice in Wonderland</p>
+          <p class="project-desc">Outil Python en ligne de commande pour analyser des livres avec le NLP.</p>
+          <div class="project-tags">
+            <span class="tag">NLP</span><span class="tag">Python</span><span class="tag">CLI</span>
+          </div>
+        </div>
+        <span class="arrow">↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<section id="experience" class="section">
+  <div class="container">
+    <p class="section-label">Parcours</p>
+    <div class="exp-list">
+      <div class="exp-item reveal d1">
+        <p class="exp-period">2023 — 2025</p>
+        <div>
+          <p class="exp-role">Bac pro Réalisation de produit imprimés et plurimédias (option: graphique)</p>
+          <p class="exp-company">Lycée Gutenberg - Illkirch-Graffenstaden</Illkirch-Graffenstaden></p>
+          <p class="exp-detail">Baccalauréat obtenu avec mention "Très Bien"</p>
+        </div>
+      </div>
+      <div class="exp-item reveal d2">
+        <p class="exp-period">2025 — 2028</p>
+        <div>
+          <p class="exp-role">Bachelor Dev Web</p>
+          <p class="exp-company">Epitech — Strasbourg</p>
+          <p class="exp-detail">Formation intensive par projets. Algorithmique, système et développement web full-stack.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<section id="contact" class="section">
+  <div class="container">
+    <p class="section-label">Contact</p>
+    <p class="contact-line reveal">Un projet en tête ?</p>
+    <p class="contact-line reveal d1"><em>Envoyez moi un message.</em></p>
+    <div class="contact-links reveal d2">
+      <a href="mailto:theomayer100@hotmail.com" class="contact-link">theomayer100@hotmail.com</a>
+      <a href="https://github.com" target="_blank" rel="noopener" class="contact-link">GitHub</a>
+      <a href="https://www.linkedin.com/in/th%C3%A9o-mayer-37a9a13a7/" target="_blank" rel="noopener" class="contact-link">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <span class="footer-copy">2026 Théo Mayer</span>
+    <span class="footer-copy">Fullstack Developer</span>
+  </div>
+</footer>
+
+<script
+  src="portfolio.js">
+</script>
+
+</body>
+</html>
