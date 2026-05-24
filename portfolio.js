@@ -59,3 +59,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
   typeWriter();
 });
+
+async function handleSubmit(e) {
+  e.preventDefault();
+  var form = document.getElementById('contactForm');
+  var success = document.getElementById('formSuccess');
+  var btn = form.querySelector('.form-submit');
+  btn.textContent = 'Envoi...';
+  btn.disabled = true;
+
+  const data = new FormData(form);
+  const response = await fetch(form.action, {
+    method: 'POST',
+    body: data,
+    headers: { 'Accept': 'application/json' }
+  });
+
+  if (response.ok) {
+    form.reset();
+    success.classList.remove('hidden');
+    setTimeout(function() { success.classList.add('hidden'); }, 4000);
+  } else {
+    alert('Erreur lors de l\'envoi, réessaie.');
+  }
+  btn.textContent = 'Envoyer le message';
+  btn.disabled = false;
+}
