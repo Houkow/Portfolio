@@ -105,3 +105,12 @@ function closeDrawer() {
 burgerBtn.addEventListener('click', openDrawer);
 drawerClose.addEventListener('click', closeDrawer);
 drawerOverlay.addEventListener('click', closeDrawer);
+
+var themeBtnMobile = document.getElementById('themeBtnMobile');
+if (themeBtnMobile) {
+  themeBtnMobile.addEventListener('click', function() {
+    var next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+  });
+}
