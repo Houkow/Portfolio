@@ -23,8 +23,23 @@
       <button class="nav-btn" onclick="scrollToSection('contact')">Contact</button>
       <button class="theme-toggle" id="themeBtn" aria-label="Changer le thème"></button>
     </div>
+    <button class="burger" id="burgerBtn" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+
+<div class="nav-drawer" id="navDrawer">
+  <button class="drawer-close" id="drawerClose" aria-label="Fermer">✕</button>
+  <div class="drawer-links">
+    <button class="drawer-btn" onclick="closeDrawer(); scrollToSection('about')">About</button>
+    <button class="drawer-btn" onclick="closeDrawer(); scrollToSection('projects')">Projets</button>
+    <button class="drawer-btn" onclick="closeDrawer(); scrollToSection('learnings')">Progression</button>
+    <button class="drawer-btn" onclick="closeDrawer(); scrollToSection('experience')">Parcours</button>
+    <button class="drawer-btn" onclick="closeDrawer(); scrollToSection('contact')">Contact</button>
+  </div>
+</div>
+<div class="drawer-overlay" id="drawerOverlay"></div>
 
 <section id="terminalIntro">
   <div class="container">
@@ -204,7 +219,6 @@
     <p class="section-label">Contact</p>
     <p class="contact-line reveal">Un projet en tête ?</p>
     <p class="contact-line reveal d1"><em>Envoyez moi un message.</em></p>
-
     <form class="contact-form" id="contactForm" action="https://formspree.io/f/mnjrzewg" method="POST" onsubmit="handleSubmit(event)">
       <div class="form-row">
         <div class="form-group">
@@ -230,7 +244,6 @@
       </button>
       <p id="formSuccess" class="form-success hidden">✓ Message envoyé ! Je vous répondrai rapidement.</p>
     </form>
-
     <div class="contact-links reveal d3">
       <a href="mailto:theomayer100@hotmail.com" class="contact-link">theomayer100@hotmail.com</a>
       <a href="https://github.com/Houkow" target="_blank" rel="noopener" class="contact-link">GitHub</a>

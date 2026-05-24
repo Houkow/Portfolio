@@ -85,3 +85,23 @@ async function handleSubmit(e) {
   btn.textContent = 'Envoyer le message';
   btn.disabled = false;
 }
+
+var burgerBtn = document.getElementById('burgerBtn');
+var navDrawer = document.getElementById('navDrawer');
+var drawerOverlay = document.getElementById('drawerOverlay');
+var drawerClose = document.getElementById('drawerClose');
+
+function openDrawer() {
+  navDrawer.classList.add('open');
+  drawerOverlay.classList.add('open');
+  burgerBtn.classList.add('open');
+}
+function closeDrawer() {
+  navDrawer.classList.remove('open');
+  drawerOverlay.classList.remove('open');
+  burgerBtn.classList.remove('open');
+}
+
+burgerBtn.addEventListener('click', openDrawer);
+drawerClose.addEventListener('click', closeDrawer);
+drawerOverlay.addEventListener('click', closeDrawer);

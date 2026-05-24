@@ -219,8 +219,6 @@
     @media (max-width: 500px) {
       .exp-item { grid-template-columns: 1fr; gap: 6px; }
       .exp-period { padding-top: 0; }
-      .nav-links { gap: 12px; }
-      .nav-btn { font-size: 0.7rem; }
     }
 
     @media (max-width: 768px) {
@@ -295,4 +293,68 @@
   .form-row { grid-template-columns: 1fr; }
   .learnings-grid { grid-template-columns: 1fr; }
   .hero-actions { flex-direction: column; align-items: flex-start; gap: 14px; }
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+.burger span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--text);
+  transition: transform 0.3s, opacity 0.3s;
+}
+.burger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.burger.open span:nth-child(2) { opacity: 0; }
+.burger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+.nav-drawer {
+  position: fixed;
+  top: 0; right: 0;
+  width: 260px; height: 100%;
+  background: var(--bg);
+  border-left: 1px solid var(--border);
+  z-index: 200;
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
+  padding: 60px 32px 32px;
+}
+.nav-drawer.open { transform: translateX(0); }
+.drawer-close {
+  position: absolute; top: 18px; right: 20px;
+  background: none; border: none;
+  font-size: 1rem; color: var(--muted);
+  cursor: pointer;
+}
+.drawer-links { display: flex; flex-direction: column; gap: 8px; margin-top: 16px; }
+.drawer-btn {
+  background: none; border: none;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.85rem; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--text);
+  cursor: pointer; text-align: left;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+.drawer-btn:last-child { border-bottom: none; }
+
+.drawer-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.3);
+  z-index: 199;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.35s;
+}
+.drawer-overlay.open { opacity: 1; pointer-events: all; }
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .burger { display: flex; }
 }
